@@ -1,0 +1,149 @@
+.contact {
+  background-color: var(--background);
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contact-info h3 {
+  color: var(--neon-blue);
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.contact-details {
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: var(--neon-blue);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--card-bg);
+  border: 1px solid var(--neon-blue);
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  background-color: var(--neon-blue);
+  box-shadow: var(--glow-shadow);
+}
+
+.social-link:hover .social-icon {
+  color: var(--background);
+}
+
+.social-icon {
+  color: var(--neon-blue);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.contact-form {
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.contact-form:hover {
+  border-color: var(--neon-blue);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #333;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  border-radius: 4px;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  width: 100%;
+  margin-top: 1rem;
+  box-shadow: 0 0 10px #25D366, 0 0 20px #25D366;
+}
+
+.whatsapp-btn:hover {
+  background-color: transparent;
+  color: #25D366;
+  border: 1px solid #25D366;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contact-info {
+    order: 2;
+  }
+  
+  .contact-form {
+    order: 1;
+  }
+}

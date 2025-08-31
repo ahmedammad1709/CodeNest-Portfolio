@@ -1,0 +1,124 @@
+.pricing {
+  background-color: var(--secondary-bg);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.pricing-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--neon-blue);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+}
+
+.pricing-card.popular {
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.pricing-card.popular:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--neon-blue);
+  color: var(--background);
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-bottom-left-radius: 8px;
+}
+
+.plan-name {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--neon-blue);
+}
+
+.plan-price {
+  margin-bottom: 1.5rem;
+}
+
+.currency {
+  font-size: 1.5rem;
+  vertical-align: top;
+  margin-right: 0.2rem;
+  color: var(--neon-blue);
+}
+
+.amount {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.plan-description {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+}
+
+.plan-features {
+  list-style: none;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.plan-features li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.plan-features li:before {
+  content: '✓';
+  color: var(--neon-blue);
+  position: absolute;
+  left: 0;
+}
+
+.pricing-btn {
+  width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .pricing-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .pricing-card.popular {
+    transform: scale(1.03);
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .pricing-card.popular {
+    transform: scale(1);
+  }
+}
